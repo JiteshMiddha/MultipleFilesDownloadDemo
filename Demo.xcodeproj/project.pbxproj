@@ -14,6 +14,10 @@
 		55134F4C206BADA80039B503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55134F4A206BADA80039B503 /* LaunchScreen.storyboard */; };
 		55134F57206BADA80039B503 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134F56206BADA80039B503 /* DemoTests.swift */; };
 		55134F62206BADA80039B503 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134F61206BADA80039B503 /* DemoUITests.swift */; };
+		55134F70206BADCB0039B503 /* DownLoadTaskInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134F6F206BADCB0039B503 /* DownLoadTaskInfoModel.swift */; };
+		55134F73206BB23D0039B503 /* DownloadProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134F72206BB23D0039B503 /* DownloadProgressCell.swift */; };
+		55134F75206D20530039B503 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134F74206D20530039B503 /* CoreDataManager.swift */; };
+		55134F78206D23FD0039B503 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55134F76206D23FD0039B503 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		55134F5D206BADA80039B503 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55134F61206BADA80039B503 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		55134F63206BADA80039B503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55134F6F206BADCB0039B503 /* DownLoadTaskInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadTaskInfoModel.swift; sourceTree = "<group>"; };
+		55134F72206BB23D0039B503 /* DownloadProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProgressCell.swift; sourceTree = "<group>"; };
+		55134F74206D20530039B503 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		55134F77206D23FD0039B503 /* Downloads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Downloads.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				55134F41206BADA80039B503 /* AppDelegate.swift */,
+				55134F71206BADCF0039B503 /* Models */,
+				55134F79206D96070039B503 /* CoreData */,
 				55134F43206BADA80039B503 /* ViewController.swift */,
+				55134F72206BB23D0039B503 /* DownloadProgressCell.swift */,
 				55134F45206BADA80039B503 /* Main.storyboard */,
 				55134F48206BADA80039B503 /* Assets.xcassets */,
 				55134F4A206BADA80039B503 /* LaunchScreen.storyboard */,
@@ -123,6 +134,23 @@
 				55134F63206BADA80039B503 /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		55134F71206BADCF0039B503 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55134F6F206BADCB0039B503 /* DownLoadTaskInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55134F79206D96070039B503 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				55134F74206D20530039B503 /* CoreDataManager.swift */,
+				55134F76206D23FD0039B503 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55134F70206BADCB0039B503 /* DownLoadTaskInfoModel.swift in Sources */,
 				55134F44206BADA80039B503 /* ViewController.swift in Sources */,
+				55134F73206BB23D0039B503 /* DownloadProgressCell.swift in Sources */,
+				55134F78206D23FD0039B503 /* Model.xcdatamodeld in Sources */,
+				55134F75206D20530039B503 /* CoreDataManager.swift in Sources */,
 				55134F42206BADA80039B503 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +396,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -415,6 +448,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -430,7 +464,7 @@
 				DEVELOPMENT_TEAM = PEUU74D2AK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jm.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = jm.Demo.MultiDownload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,7 +479,7 @@
 				DEVELOPMENT_TEAM = PEUU74D2AK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jm.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = jm.Demo.MultiDownload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,6 +592,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55134F76206D23FD0039B503 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55134F77206D23FD0039B503 /* Downloads.xcdatamodel */,
+			);
+			currentVersion = 55134F77206D23FD0039B503 /* Downloads.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55134F36206BADA80039B503 /* Project object */;
 }
